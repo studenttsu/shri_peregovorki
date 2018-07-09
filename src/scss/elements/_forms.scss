@@ -1,0 +1,42 @@
+@import '../vars';
+
+%placeholder {
+  color: #858E98;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  @extend %placeholder;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  input {
+    height: 38px;
+    line-height: 1;
+    font-size: 13px;
+    letter-spacing: 0.47px;
+    color: $black;
+    border-radius: $radius;
+    border: 2px solid $grey;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: 0;
+    transition: .1s ease-in-out border-color;
+  
+    &:hover,
+    &:focus {
+      border-color: $blue;
+    }
+  }
+}

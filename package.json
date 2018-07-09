@@ -3,10 +3,6 @@
   "author": "Konstantin Terekhin <konstantin.teryohin@rubius.com>",
   "version": "1.0.0",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/studenttsu/Components.git"
-  },
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "SET NODE_ENV=prod& webpack --mode production",
@@ -36,5 +32,8 @@
     "webpack": "^4.11.1",
     "webpack-cli": "^3.0.3",
     "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
   }
 }

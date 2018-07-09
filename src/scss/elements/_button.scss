@@ -1,0 +1,72 @@
+@import '../vars';
+
+$disabled-color: #E2E5E8;
+
+@mixin button-background ($color) {
+  background-color: $color;
+
+  &:hover {
+    background-color: darken($color, 4%);
+  }
+
+  &:active {
+    background-color: darken($color, 10%);
+  }
+}
+
+%button-common {
+  cursor: pointer;
+  font: 500 13px/1.6 $font;
+  border: none;
+  transition: .1s ease-in-out background-color;
+  outline: 0;  
+}
+
+.button {
+  @include button-background($grey);
+  @extend %button-common;
+
+  color: $black;
+  border-radius: $radius;
+  padding: 8px 17px;
+
+  &:disabled {
+    color: rgba($black, .2);
+    background-color: $disabled-color;
+    cursor: default;
+
+    &:hover {
+      background-color: $disabled-color;
+    }
+  }
+
+  &--primary {
+    @include button-background($blue);
+    color: #fff;
+  }
+}
+
+.circle-button {
+  @include button-background($grey);
+  @extend %button-common;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  vertical-align: middle;
+
+  img {
+    opacity: 0.5;
+    transition: .1s ease-in-out opacity;
+  }
+
+  &:hover,
+  &:focus {
+    img {
+      opacity: 1;
+    }
+  }
+}
