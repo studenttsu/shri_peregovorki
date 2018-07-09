@@ -1,0 +1,40 @@
+{
+  "name": "components",
+  "author": "Konstantin Terekhin <konstantin.teryohin@rubius.com>",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/studenttsu/Components.git"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "SET NODE_ENV=prod& webpack --mode production",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.41",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "autoprefixer": "^8.6.1",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^8.0.0-beta.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.12.0",
+    "extract-loader": "^2.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.3",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
